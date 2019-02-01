@@ -1,0 +1,110 @@
+{
+    timestamp : new Date(),
+    EventName : "An internal error has occurred." ,
+    ElementName : "RY1AIR01",
+    InstanceName : "10.156.61.24_.1.1.1.1.13.0",
+    OriginSys : "10.156.61.24",
+    SenderSys : "10.156.61.24",
+    Severity : "Minor",
+    ClassName : "SNMPTrap",
+    ElementClassName : "Node",
+    ExpireIn : "7200",
+    State : "Notify",
+    InMaintenance : true,
+    EventText : "Varbinds: An internal error has occurred. .1.1.1.1.13.0 Subscriber not found 8 546",
+    UD1 : "",
+    UD2 : "",
+    UD3 : "",
+    UD4 : "",
+    UD5 : "",
+    logfile : "air.log",
+    assigned_to : "user_name"
+}
+
+
+db.alarms.insert({
+timestamp : new Date(),
+EventName : "An internal error has occurred." ,
+ElementName : "RY1AIR01",
+InstanceName : "10.156.61.24_.1.1.1.1.13.0",
+OriginSys : "10.156.61.24",
+SenderSys : "10.156.61.24",
+Severity : "Minor",
+ClassName : "SNMPTrap",
+ElementClassName : "Node",
+ExpireIn : "7200",
+State : "Notify",
+InMaintenance : true,
+EventText : "Varbinds: An internal error has occurred. .1.1.1.1.13.0 Subscriber not found 8 546",
+UD1 : "",
+UD2 : "",
+UD3 : "",
+UD4 : "",
+UD5 : "",
+logfile : "air.log",
+assigned_to : "user_name"
+})
+
+
+
+var counter = 0;
+var i = setInterval(function(){
+// do your thing
+Alarms.insert({
+timestamp : new Date(),
+EventName : "An internal error has occurred." + counter ,
+ElementName : "RY1AIR01",
+InstanceName : "10.156.61.24_.1.1.1.1.13.0",
+OriginSys : "10.156.61.24",
+SenderSys : "10.156.61.24",
+Severity : "Major",
+ClassName : "Huwaei",
+ElementClassName : "Node",
+ExpireIn : "7200",
+State : "Notify",
+InMaintenance : true,
+EventText : "Varbinds: An internal error has occurred. .1.1.1.1.13.0 Subscriber not found 8 546",
+UD1 : "",
+UD2 : "",
+UD3 : "",
+UD4 : "",
+UD5 : "",
+logfile : "air.log",
+assigned_to : "user_name"
+})
+
+counter++;
+if(counter === 1000) {
+clearInterval(i);
+}
+}, 1000);
+
+
+Alarms.insert({
+timestamp : new Date(),
+EventName : "An internal error has occurred." ,
+ElementName : "RY1AIR01",
+InstanceName : "10.156.61.24_.1.1.1.1.13.0",
+OriginSys : "10.156.61.24",
+SenderSys : "10.156.61.24",
+Severity : "Major",
+ClassName : "Huwaei",
+ElementClassName : "Node",
+ExpireIn : "7200",
+State : "Notify",
+InMaintenance : true,
+EventText : "Varbinds: An internal error has occurred. .1.1.1.1.13.0 Subscriber not found 8 546",
+UD1 : "",
+UD2 : "",
+UD3 : "",
+UD4 : "",
+UD5 : "",
+logfile : "air.log",
+assigned_to : "user_name"
+})
+
+
+
+
+
+

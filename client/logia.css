@@ -1,0 +1,61 @@
+body{font-family:"Open Sans","Helvetica Neue",Helvetica, Arial, sans-serif;font-size:14px;background-color:#fff;font-weight:300;height:100%}
+h3{font-family:"Open Sans","Helvetica Neue",Helvetica, Arial;font-size:16px;color:#031634;margin:0}
+.desc{color:#9FD6D2}
+.right{float:right}
+.left{float:left}
+.header{font-family:"Open Sans";float:left;width:100%;background-color:#031634;color:#FFF;border-bottom:7px solid #9FD6D2}
+.header-left{float:left;padding:9px}
+.header-right{float:right;padding:9px}
+.header-right a{color:#67CDDC;padding:7px}
+.header-right a:hover,.logo:hover{color:#9FD6D2;text-decoration:none}
+.logo{font-size:20px;color:#FFF;font-weight:700}
+.slogan{font-size:15px;color:#9FD6D2}
+.beta{font-size:12px;color:#FFA07A}
+.container{float:left;width:100%}
+.report-tree{float:left;width:20%;height:100vh;min-width:200px;padding:5px}
+.content{float:left;width:75%;min-height:1200px;padding:5px 0 5px 15px}
+.chart{float:left;height:500px;text-align:center;font-weight:700;margin-bottom:2em}
+.chart.full{width:100%}
+.chart.half{width:50%}
+.chart.third{width:33%}
+.chart.selected{width:100%!important}
+.ui-resizable-e{cursor:e-resize;width:5px;right:-5px;top:0;bottom:0;background-color:#f1f1f1}
+.tree{min-height:20px;margin-bottom:20px;margin-left:-50px;padding:0}
+.tree li{list-style-type:none;margin-left:0;position:relative;padding:0}
+.tree li::before,.tree li::after{content:'';left:-7px;position:absolute;right:auto}
+.tree li span{display:inline-block;text-decoration:none}
+.tree>ul>li::before,.tree>ul>li::after{border:0}
+.tree li:last-child::before{height:30px}
+.tree li.parent_li>a{color:#436aa8}
+.tree li.parent_li>a:hover,.tree li.parent_li>span:hover+ul li a{text-decoration:none;color:#9FD6D2}
+.console table{width:100%;font-size:12px}
+.console table tr th{border:1px solid #ccc;background-color:#f1f1f1;padding:3px}
+.console table td{border:1px solid #ccc;cursor:crosshair;padding:3px}
+.console-popup{font-size:12px;position:absolute;top:25%;left:25%;width:50%;height:50%;border:4px solid #f1f1f1;background-color:#fff;z-index:1002;overflow:auto;opacity:0.97;padding:16px}
+.console-popup-close{float:right;color:#FF4500;font-size:20px}
+.prev,.next{font-size:12px;width:50px;text-align:center;margin-right:10px;user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;color:#20B2AA;cursor:pointer}
+.prev.disabled,.next.disabled{color:#e38d13;cursor:default}
+.Critical{color:red}
+.Minor{color:#f7e300}
+.Major{color:#FFA07A}
+.Unknown{color:#add8e6}
+.Normal{color:#20B2AA}
+.clear{color:#A9A9A9}
+.Notify{color:#ffc520}
+.clear-alarm{color:#000;font-size:16px;margin-right:10px;margin-left:5px}
+.ack-alarm{color:#000;font-size:16px}
+.profile-pic{width:90px;height:90px;border:5px solid #f1f1f1;margin-top:-60px}
+.ui-timepicker-div .ui-widget-header{margin-bottom:8px}
+.ui-timepicker-div dl{text-align:left}
+.ui-timepicker-div dl dt{float:left;clear:left;padding:0 0 0 5px}
+.ui-timepicker-div dl dd{margin:0 10px 10px 45%}
+.ui-timepicker-div td{font-size:90%}
+.ui-tpicker-grid-label{background:none;border:none;margin:0;padding:0}
+.ui-timepicker-rtl{direction:rtl}
+.ui-timepicker-rtl dl{text-align:right;padding:0 5px 0 0}
+.ui-timepicker-rtl dl dt{float:right;clear:right}
+.ui-timepicker-rtl dl dd{margin:0 45% 10px 10px}
+.wideTxt{width:90%;margin-bottom:10px}
+#badge{background-color:#fff}
+.search-box div{margin-bottom:20px}
+.tree li.parent_li>span,.console table td:hover{cursor:pointer}

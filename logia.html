@@ -1,0 +1,179 @@
+<head>
+  <title>logia</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body></body>
+
+<template name="layout">
+    {{> header }}
+    {{> root }}
+</template>
+<template name="header">
+    <div class="header">
+        <div class="header-left">
+            <a class="logo" href="/">LOGIA+</a><span class="beta">alpha</span>
+            <span class="slogan">| Realtime Dashboards</span>
+        </div>
+        <div class="header-right">
+        </div>
+    </div>
+</template>
+<template name="loading">{{>spinner}}</template>
+
+<template name="root">
+
+    <div class="container">
+        <div class="report-tree">
+            {{> report_tree }}
+        </div>
+        <div class="content">
+            {{{ yield }}}
+        </div>
+    </div>
+
+</template>
+
+<template name="report_tree">
+
+
+    <div class='tree'>
+        <ul>
+            <li class='parent_li'>
+                <a href="/zconsole/"><i class="glyphicon glyphicon-minus-sign"></i> Alarms Console</a>
+                <ul>
+                    <li class='parent_li'><a href="/highcharts/"><i class="glyphicon glyphicon-minus-sign"></i> High Charts</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+    {{report_list}}
+</template>
+
+<template name="main">
+    Main Page
+</template>
+
+<template name="report">
+    Reports Page
+    <div id="example-container">
+    </div>
+</template>
+
+<template name="console">
+    <h3>Console view for all alarms</h3>
+    <p>the console view is recieving the alarms in realtime from MongoDB and presenting in tabular format, users can take some actions like acknowledge and clear alarms.</p>
+
+    Alarm Class
+
+    <select id="classSelect">
+        <option>Huwaei</option>
+        <option>All</option>
+        <option>SNMPTrap</option>
+        <option>Ericsson</option>
+
+    </select>
+
+    <br>
+    <br>
+
+    <div class="console">
+
+    </div>
+
+
+</template>
+
+<template name="search">
+    <h3>Search Events</h3>
+    <img src="/images/messi.png" class="img-circle profile-pic right">
+    <p>this page demo how to search and return data object for each search criteria, this will be used later in generation and saving of reports</p>
+
+    <ul>
+        <li>Search must use time range</li>
+        <li>Search must include one or some of the Event Properties</li>
+        <li>Search should return count per aggrigation period</li>
+        <li style="color:lightskyblue">Sample Search text : { "ClassName": "Huwaei" ,  "State" : "Clear"} </li>
+    </ul>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search Criteria" class="wideTxt" id="searchTxt" />
+        <input type="text" placeholder="Start Datetime" class="timepicker" id="startTimeTxt" value="03/23/2014 00:00"/>
+        <input type="text" placeholder="End Datetime" class="timepicker" id="endTimeTxt" value="03/24/2014 00:00"/>
+
+        <a href="#" class="btn btn-sm btn-success" id="searchBtn">
+            Get Alarms
+            <span id="badge" class="badge badge-warning">0</span>
+        </a>
+
+
+        <br>
+        <br>
+
+        <div class="console">
+
+        </div>
+
+    </div>
+
+
+
+</template>
+
+<template name="zConsole">
+    <h3>Main Console</h3>
+    <img src="/images/messi.png" class="img-circle profile-pic right">
+    <p>this page demo how to search and return data object for each search criteria, this will be used later in generation and saving of reports</p>
+
+
+    <div class="search-box">
+        <input type="text" placeholder="Search Criteria" class="wideTxt" id="searchTxt" />
+        <br>
+        <input type="text" placeholder="Start Datetime" class="timepicker" id="startTimeTxt" value="03/23/2014 00:00"/>
+        <input type="text" placeholder="End Datetime" class="timepicker" id="endTimeTxt" value="03/24/2014 00:00"/>
+
+        <a href="#" class="btn btn-sm btn-success" id="searchBtn">
+            Get Alarms
+            <span id="badge" class="badge badge-warning">0</span>
+        </a>
+
+        <br>
+        <br>
+
+        <div class="fixedSearch btn-group">
+            <button duration="1h" class="btn btn-default">Last 1h</button>
+            <button duration="8h" class="btn btn-default">Last 8h</button>
+            <button duration="1d" class="btn btn-default">Last 1d</button>
+            <button duration="1w" class="btn btn-default">Last 1W</button>
+            <button duration="1M" class="btn btn-default">Last 1M</button>
+            <button duration="all" class="btn btn-default">Begining of Time</button>
+
+        </div>
+
+        <div class="console"></div>
+
+
+
+
+    </div>
+
+
+
+
+</template>
+
+
+<template name="highcharts">
+    <h3>High Chart Example</h3>
+    <p>this is an example using highcharts liberary instead of NVD3 charting component</p>
+    <div id="charts"></div>
+</template>
+
+<template name="observe">
+    this is observer tenokate
+</template>

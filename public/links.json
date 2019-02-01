@@ -1,0 +1,109 @@
+{
+    report_name : "Main Report",
+    childs : {
+        report_name : "Sub 1",
+        childs : {
+            report_name : "Sub 2",
+            childs : {
+
+            }
+        }
+    }
+}
+
+
+
+
+Reports.insert({
+report_name : "Third Main report",
+childs : [{ _id: new Meteor.Collection.ObjectID()._str, report_name : "Sub 1",
+    childs :[
+        { _id : new Meteor.Collection.ObjectID()._str, report_name : "Sub 2", childs : {} },
+        { _id : new Meteor.Collection.ObjectID()._str, report_name : "Sub 2", childs : {} }
+    ]
+    }]
+});
+
+
+
+Reports.insert({
+report_name : "1",
+childs : [{
+        _id: new Meteor.Collection.ObjectID()._str, report_name : "1.1",
+        childs :[
+            { _id : new Meteor.Collection.ObjectID()._str, report_name : "1.1.1", childs : {} },
+            { _id : new Meteor.Collection.ObjectID()._str, report_name : "1.1.2", childs : {} }
+            ]
+        },{
+        _id: new Meteor.Collection.ObjectID()._str, report_name : "1.2",
+        childs :[
+            { _id : new Meteor.Collection.ObjectID()._str, report_name : "1.2.1", childs : {} },
+            { _id : new Meteor.Collection.ObjectID()._str, report_name : "1.2.2", childs : {} }
+            ]
+        }
+
+        ]
+});
+
+
+
+Reports.insert({
+report_name : "2",
+childs : [{
+_id: new Meteor.Collection.ObjectID()._str, report_name : "2.1",
+childs :[
+{ _id : new Meteor.Collection.ObjectID()._str, report_name : "2.1.1", childs : {} },
+{ _id : new Meteor.Collection.ObjectID()._str, report_name : "2.1.2", childs : {} }
+]
+},{
+_id: new Meteor.Collection.ObjectID()._str, report_name : "2.2",
+childs :[
+{ _id : new Meteor.Collection.ObjectID()._str, report_name : "2.2.1", childs : {} },
+{ _id : new Meteor.Collection.ObjectID()._str, report_name : "2.2.2", childs : {} }
+]
+}
+
+]
+});
+
+
+
+Reports.insert({
+report_name : "3",
+childs : [{
+_id: new Meteor.Collection.ObjectID()._str, report_name : "3.1",
+childs :[
+{ _id : new Meteor.Collection.ObjectID()._str, report_name : "3.1.1", childs : [
+{ _id : new Meteor.Collection.ObjectID()._str, report_name : "3.1.1.1", childs : {} },
+{ _id : new Meteor.Collection.ObjectID()._str, report_name : "3.1.1.2", childs : {} }
+] },
+{ _id : new Meteor.Collection.ObjectID()._str, report_name : "3.1.2", childs : {} }
+]
+},{
+_id: new Meteor.Collection.ObjectID()._str, report_name : "3.2",
+childs :[
+{ _id : new Meteor.Collection.ObjectID()._str, report_name : "3.2.1", childs : {} },
+{ _id : new Meteor.Collection.ObjectID()._str, report_name : "3.2.2", childs : {} }
+]
+}
+
+]
+});
+
+
+
+
+meteor:PRIMARY> db.sampleData.update({ key: "Stream 1" },{ $push: { values: { x: 6, y: 5 } } })
+
+sampleData.update({ key: "Stream 1" },{ $push: { x: 5, y: 6 } })
+
+
+db.sample
+
+{ key: "Stream 1", color: "orange", values: [ {x: 1, y: 1}, {x: 2, y: 4}, {x: 3, y: 2}, {x: 4, y: 1}, {x: 5, y: 3},  {x: 6, y: 6},  {x: 7, y: 7},{x: 8, y: 1}]}
+
+{ key: "Stream 2", color: "orange", values: [ {x: 1, y: 1}, {x: 2, y: 4}]}
+
+
+
+

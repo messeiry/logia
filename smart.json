@@ -1,0 +1,11 @@
+{
+  "packages": {
+    "mini-pages": {},
+    "bootstrap-3": {},
+    "iron-router": {},
+    "spin": {},
+    "jquery-ui-bootstrap": {},
+    "highcharts-with-exporting": {},
+    "highcharts": {}
+  }
+}
